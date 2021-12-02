@@ -1,0 +1,143 @@
+:root {
+	/* typography */
+	--primary-font: "Barlow Semi Condensed", sans-serif;
+	--fw-bold: 500;
+	--fw-bolder: 600;
+
+	/*primary colors */
+	--color-violet: hsl(263, 55%, 52%);
+	--color-light-blue: hsl(217, 19%, 35%);
+	--color-dark-blue: hsl(219, 29%, 14%);
+	--color-white: hsl(0, 0%, 100%);
+	/* neutral colors  */
+	--background-color: hsl(210, 46%, 95%);
+	--gray-text: hsl(0, 0%, 81%);
+	/*opacity Colors */
+	--small-border: hsl(263, 64%, 63%);
+	--half-gray: hsla(0, 0%, 81%, 0.5);
+	--seventy-gray: hsla(0, 0%, 81%, 0.7);
+	--half-blue: hsla(217, 19%, 35%, 0.5);
+	--seventy-blue: hsla(217, 19%, 35%, 0.7);
+}
+
+body {
+	font-size: 13px;
+	font-family: var(--primary-font);
+	background-color: var(--background-color);
+	padding: 4em 2em;
+	display: grid;
+	place-items: center;
+}
+
+section {
+	padding: 2em;
+	border-radius: 10px;
+}
+
+img {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+}
+
+.container {
+	margin: 6em;
+	display: grid;
+	place-items: center;
+}
+
+.flexed {
+	display: flex;
+	gap: 1.4em;
+	margin-bottom: 1.3em;
+}
+
+h2 {
+	font-weight: var(--fw-bolder);
+}
+
+h3 {
+	font-weight: var(--fw-bold);
+}
+
+h2,
+h3 {
+	font-size: inherit;
+}
+
+.bolded {
+	font-weight: 600;
+	font-size: 1.3rem;
+	line-height: 1.2;
+	margin-bottom: 1.5rem;
+}
+
+.light-blue {
+	font-weight: 500;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 2rem;
+	width: 80vw;
+}
+
+.one {
+	grid-column: 1 / span 2;
+	background-color: var(--color-violet);
+	background-image: url(/images/bg-pattern-quotation.svg);
+	background-repeat: no-repeat;
+	background-position: top right 88px;
+}
+
+.two {
+	background-color: var(--color-light-blue);
+	grid-column: 3;
+}
+
+.three {
+	background-color: var(--color-white);
+	grid-column: 1;
+	grid-row: 2;
+}
+
+.four {
+	background-color: var(--color-dark-blue);
+	grid-column: 2 / span 2;
+	grid-row: 2;
+}
+
+.five {
+	background-color: var(--color-white);
+	grid-row: 1 / span 2;
+}
+
+/*Color for text*/
+.light-gray {
+	color: var(--gray-text);
+}
+
+.heading-dark-gray {
+	color: var(--half-gray);
+}
+
+.para-dark-gray {
+	color: var(--seventy-gray);
+}
+
+.dark-blue {
+	color: var(--color-light-blue);
+}
+
+.heading-light-blue {
+	color: var(--half-blue);
+}
+
+.para-light-blue {
+	color: var(--seventy-blue);
+}
+
+.attribution {
+	margin-top: 3rem;
+}

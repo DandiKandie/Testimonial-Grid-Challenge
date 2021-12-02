@@ -1,0 +1,131 @@
+:root {
+	/* typography */
+	--primary-font: "Barlow Semi Condensed", sans-serif;
+	--fw-bold: 500;
+	--fw-semi-bold: 600;
+
+	/*primary colors */
+	--color-violet: hsl(263, 55%, 52%);
+	--color-light-blue: hsl(217, 19%, 35%);
+	--color-dark-blue: hsl(219, 29%, 14%);
+	--color-white: hsl(0, 0%, 100%);
+	/* neutral colors  */
+	--background-color: hsl(210, 46%, 95%);
+	--gray-text: hsl(0, 0%, 81%);
+	/*opacity Colors */
+	--small-border: hsl(263, 64%, 63%);
+	--half-gray: hsla(0, 0%, 81%, 0.5);
+	--seventy-gray: hsla(0, 0%, 81%, 0.7);
+	--half-blue: hsla(217, 19%, 35%, 0.5);
+	--seventy-blue: hsla(217, 19%, 35%, 0.7);
+}
+
+body {
+	font-size: 13px;
+	font-family: var(--primary-font);
+	background-color: var(--background-color);
+	padding: 4em 2em;
+}
+
+.container {
+	display: grid;
+	grid-template-columns: 1fr;
+}
+
+.one-column {
+	padding: 1.5rem;
+	margin-bottom: 1.7rem;
+	border-radius: 8px;
+}
+
+.heading-one,
+.heading-two {
+	font-size: 13px;
+}
+
+.bold-light-paragraph,
+.dk-gray-blue {
+	font-weight: 600;
+	font-size: 20px;
+	margin-bottom: 1rem;
+}
+
+.image-headings {
+	display: flex;
+	flex-direction: row;
+	gap: 1.3rem;
+	margin-bottom: 1rem;
+}
+
+.block-image {
+	display: block;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+}
+
+.small-border {
+	border: var(--small-border) 3px solid;
+}
+
+.purple-border {
+	border: var(--color-violet) 3px solid;
+}
+
+.heading-dark {
+	color: var(--gray-text);
+}
+
+.heading-light {
+	color: var(--half-gray);
+}
+
+.bold-light-paragraph {
+	color: var(--gray-text);
+	word-break: keep-all;
+}
+
+.light-dark-paragraph {
+	color: var(--seventy-gray);
+}
+
+.heading-dk-blue {
+	color: var(--color-light-blue);
+}
+
+.heading-lg-blue {
+	color: var(--half-blue);
+}
+
+.dk-gray-blue {
+	color: var(--color-light-blue);
+}
+
+.lg-gray-blue {
+	color: var(--seventy-blue);
+}
+
+/*Testimonial specific styles. */
+.column-daniel {
+	background-color: var(--color-violet);
+	background-image: url(/images/bg-pattern-quotation.svg);
+	background-repeat: no-repeat;
+	background-position: top right 10%;
+}
+
+.column-jonathan {
+	background-color: var(--color-light-blue);
+}
+
+.column-jeanette,
+.column-kira {
+	background-color: var(--color-white);
+}
+
+.column-patrick {
+	background-color: var(--color-dark-blue);
+}
+
+/*media queries */
+@media screen and (min-width: 50em) {
+}
