@@ -2,7 +2,7 @@
 	/* typography */
 	--primary-font: "Barlow Semi Condensed", sans-serif;
 	--fw-bold: 500;
-	--fw-semi-bold: 600;
+	--fw-bolder: 600;
 
 	/*primary colors */
 	--color-violet: hsl(263, 55%, 52%);
@@ -25,107 +25,189 @@ body {
 	font-family: var(--primary-font);
 	background-color: var(--background-color);
 	padding: 4em 2em;
-}
-
-.container {
 	display: grid;
-	grid-template-columns: 1fr;
+	place-items: center;
 }
 
-.one-column {
-	padding: 1.5rem;
-	margin-bottom: 1.7rem;
-	border-radius: 8px;
+section {
+	padding: 2em;
+	border-radius: 10px;
 }
 
-.heading-one,
-.heading-two {
-	font-size: 13px;
-}
-
-.bold-light-paragraph,
-.dk-gray-blue {
-	font-weight: 600;
-	font-size: 20px;
-	margin-bottom: 1rem;
-}
-
-.image-headings {
-	display: flex;
-	flex-direction: row;
-	gap: 1.3rem;
-	margin-bottom: 1rem;
-}
-
-.block-image {
-	display: block;
-	width: 30px;
-	height: 30px;
+img {
+	width: 40px;
+	height: 40px;
 	border-radius: 50%;
+}
+
+.flexed {
+	display: flex;
+	gap: 1.4em;
+	margin-bottom: 1.3em;
+}
+
+h2 {
+	font-weight: var(--fw-bolder);
+}
+
+h3 {
+	font-weight: var(--fw-bold);
+}
+
+h2,
+h3 {
+	font-size: inherit;
+}
+
+.bolded {
+	font-weight: 600;
+	font-size: 1.3rem;
+	line-height: 1.2;
+	margin-bottom: 1.5rem;
+}
+
+.light-blue {
+	font-weight: 500;
+}
+
+/*Color for text*/
+.light-gray {
+	color: var(--gray-text);
+}
+
+.heading-dark-gray {
+	color: var(--half-gray);
+}
+
+.para-dark-gray {
+	color: var(--seventy-gray);
+}
+
+.dark-blue {
+	color: var(--color-light-blue);
+}
+
+.heading-light-blue {
+	color: var(--half-blue);
+}
+
+.para-light-blue {
+	color: var(--seventy-blue);
+}
+
+.attribution {
+	margin-top: 3rem;
+}
+
+section {
+	margin-bottom: 2rem;
+}
+
+.one {
+	background-color: var(--color-violet);
+	background-image: url(/images/bg-pattern-quotation.svg);
+	background-repeat: no-repeat;
+	background-position: top right 30px;
 }
 
 .small-border {
 	border: var(--small-border) 3px solid;
 }
 
+.two {
+	background-color: var(--color-light-blue);
+}
+
+.three,
+.five {
+	background-color: var(--color-white);
+}
+
+.four {
+	background-color: var(--color-dark-blue);
+}
+
 .purple-border {
 	border: var(--color-violet) 3px solid;
 }
 
-.heading-dark {
-	color: var(--gray-text);
+/*Tablet size*/
+@media screen and (min-width: 768px) {
+	.container {
+		margin: 4rem;
+	}
+	section {
+		margin-bottom: 0;
+	}
+	.grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1.3rem;
+	}
+
+	.one {
+		grid-column: 1 / span 3;
+	}
+
+	.two {
+		grid-column: 2;
+		grid-row: 2;
+	}
+
+	.three {
+		grid-column: 1;
+		grid-row: 2;
+	}
+
+	.four {
+		grid-column: 1 / span 2;
+		grid-row: 3;
+	}
+
+	.five {
+		grid-column: 3;
+		grid-row: 2 / span 2;
+	}
 }
 
-.heading-light {
-	color: var(--half-gray);
-}
+/* Destop Size */
+@media screen and (min-width: 1440px) {
+	.container {
+		margin: 6em;
+		display: grid;
+		place-items: center;
+	}
 
-.bold-light-paragraph {
-	color: var(--gray-text);
-	word-break: keep-all;
-}
+	.grid {
+		grid-template-columns: repeat(4, 1fr);
+		gap: 2rem;
+		width: 80vw;
+	}
 
-.light-dark-paragraph {
-	color: var(--seventy-gray);
-}
+	.one {
+		grid-column: 1 / span 2;
+		/* background-image: url(/images/bg-pattern-quotation.svg);
+		background-repeat: no-repeat; */
+		background-position: top right 88px;
+	}
 
-.heading-dk-blue {
-	color: var(--color-light-blue);
-}
+	.two {
+		grid-column: 3;
+		grid-row: 1;
+	}
 
-.heading-lg-blue {
-	color: var(--half-blue);
-}
+	.three {
+		grid-column: 1;
+		grid-row: 2;
+	}
 
-.dk-gray-blue {
-	color: var(--color-light-blue);
-}
+	.four {
+		grid-column: 2 / span 2;
+		grid-row: 2;
+	}
 
-.lg-gray-blue {
-	color: var(--seventy-blue);
-}
-
-/*Testimonial specific styles. */
-.column-daniel {
-	background-color: var(--color-violet);
-	background-image: url(/images/bg-pattern-quotation.svg);
-	background-repeat: no-repeat;
-	background-position: top right 10%;
-}
-
-.column-jonathan {
-	background-color: var(--color-light-blue);
-}
-
-.column-jeanette,
-.column-kira {
-	background-color: var(--color-white);
-}
-
-.column-patrick {
-	background-color: var(--color-dark-blue);
-}
-
-/*media queries */
-@media screen and (min-width: 50em) {
+	.five {
+		grid-column: 4;
+		grid-row: 1 / span 2;
+	}
 }
